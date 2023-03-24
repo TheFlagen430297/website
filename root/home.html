@@ -58,7 +58,7 @@ The site has a new look! I've updated it to look and preform much better" name="
             <!-- <link rel="stylesheet" href="https://storage.theflagen430297.com/css/animation.css" type="text/css"> -->
             <link rel="stylesheet" href="../css/animations.css" type="text/css">
             <link rel="shortcut icon" href="https://storage.theflagen430297.com/pictures/logo.ico" type="image/x-icon">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
             <!-- <script>document.write('<script src="https://storage.theflagen430297.com/source-code.js?update-cache=' + Math.floor(Math.random() * 100) + '" defer\><\/script>');</script> -->
             <script>document.write('<script src="beta-source-code.js?update-cache=' + Math.floor(Math.random() * 100) + '" defer\><\/script>');</script>
     </head>
@@ -66,20 +66,32 @@ The site has a new look! I've updated it to look and preform much better" name="
         <div id="background-container">
             <div id="BGG1"></div> 
             <div id="BGG2"></div> 
-            <img src="https://storage.theflagen430297.com/pictures/Valorant-Banner-1920x928.png" alt="Error: Background Image didn't load!">
+            <img id="picture" src="https://storage.theflagen430297.com/pictures/Valorant-Banner-1920x928.png" alt="Error: Background Image didn't load!">
         </div>
         <div id="navigation-container">
             <div id="content">
                 <div id="trademark">
-                    <h3 id="text" class="VALORANTFontBlink">TheFlagen430297</h3>
+                    <h3 id="text"><span id="span">TheFlagen430297</span></h3>
                     <img src="https://storage.theflagen430297.com/pictures/logo.png" alt="Error: Logo didn't load!" id="logo">
+                </div>
+                <div id="mobile-container">
+                    <span id="toggle">...</span>
                 </div>
             </div>
         </div>
         <div id="content-container">
-            <div id="content">
+            <div id="mobile-container" class="tracking-in-expand" >
+                <ul id="links" style="left:30px; position: absolute;">
+                    <li>My Discord Server</li>
+                    <li>YouTube</li>
+                    <li>New Ondorria</li>
+                    <li>Slide Da Cube</li>
+                </ul>
+            </div>
+            <div id="content" >
                 <h1>This is the start</h1>
                 <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
                     Test
                     <br>Test
                     <br>Test
