@@ -15,12 +15,7 @@ body {
     height: 100%;
     width: 100%;
     object-fit: fill;
-
-    & img {
-        height: 100%;
-        width: 100%;
-    }
-
+    & img { height: 100%; width: 100%; }
     & .red-background {
         opacity: 0;
         margin: 0;
@@ -31,7 +26,6 @@ body {
         -webkit-backdrop-filter: blur(2.5px);
         backdrop-filter: blur(2.5px);
     }
-
     & .black-background {
         opacity: 0;
         margin: 0;
@@ -58,10 +52,10 @@ body {
     border-radius: 0px 0px 0px 20px;
     z-index: 30;
     & #content {
-        margin-top: 10px;
-        height: 70px;
+        margin-top: 5px;
+        height: 100%;
         width: 100%;
-        padding: 2px 0 2px 30px;
+        padding: 0px 0 2px 30px;
         & #trademark {
             position: absolute;
             width: 550px;
@@ -72,19 +66,44 @@ body {
                 border-radius: 90%;
             }
             & #text {
-                //top: 12px;
-                left: 75px;
+                height: 100%;
+                width: 100%;
                 position: absolute;
-                color: #fff;
+                color: #b0b0c5;
                 font-weight: 800;
                 font-size: 50px;
-                & span {
-                    text-align: center;
-                }
+                &:hover { color: var(--text-color); font-style: italic;}
+                & span { margin-left: 70px; text-align: center;}
             }
         }
-        & #mobile-container {
-            display: none;
+        & #mobile-container { display: none; }
+        & #headlines {
+            left: 100px;
+            top: 68px;
+            position: absolute;
+            height: 30px;
+            width: 100%;
+            color: #ececff;
+            font-weight: bold;
+            &::before {
+                content: "Headlines: ";
+                color: #0ca1ed;
+                font-weight: bold;
+            }
+            &::after {
+                content: "_";
+                -webkit-animation: text-blinking 0.5s infinite;
+                animation: text-blinking 0.5s infinite;
+            }
+        }
+        & #highlighted-pages-container {
+            display: flex;
+            position: absolute;
+            left: 575px;
+            height: 60%;
+            width: 50%;
+            padding: 10px;
+            font-size: 1.5rem;
         }
     }
 }
@@ -97,12 +116,9 @@ body {
     width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
-    & #mobile-container {
-        display: none;
-    }
-    & #content {
-        padding-left: 40px;
-    } 
+    & #mobile-container { display: none; }
+    & #other-links-container { display: none; margin-top: 20px; font-size: 50px;}
+    & #content { padding-left: 40px; } 
 }
 
 @media only screen and (max-width:700px) {
@@ -126,37 +142,23 @@ body {
             & #trademark {
                 max-width: 55%;
                 & #logo { margin-top: 0px; height: 32px; width: 32px; }
-                & #text { left: 35px; font-size: 20px; }
+                & #text { font-size: 20px; & #span { margin-left: 40px; } }
             }
-            & #mobile-container {
-                display: block;
-                & #toggle {
-                    position: absolute;
-                    float: right;
-                    right: 20px;
-                }
-            }
+            & #mobile-container { display: block; & #toggle { position: absolute; float: right; right: 20px; } }
+            & #headlines { display: none; }
+            & #highlighted-pages { display: none; }
         }
     }
 }
 
 /* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
+::-webkit-scrollbar { width: 10px; }
 
 /* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #141414;
-}
+::-webkit-scrollbar-track { box-shadow: inset 0 0 5px #141414; }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-    background: #494949;
-    border-radius: 10px;
-}
+::-webkit-scrollbar-thumb { background: #494949; border-radius: 10px; }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #0ca1ed;
-}
+::-webkit-scrollbar-thumb:hover { background: #0ca1ed; }

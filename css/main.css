@@ -59,10 +59,10 @@ body {
   z-index: 30;
 }
 #navigation-container #content {
-  margin-top: 10px;
-  height: 70px;
+  margin-top: 5px;
+  height: 100%;
   width: 100%;
-  padding: 2px 0 2px 30px;
+  padding: 0px 0 2px 30px;
 }
 #navigation-container #content #trademark {
   position: absolute;
@@ -75,17 +75,50 @@ body {
   border-radius: 90%;
 }
 #navigation-container #content #trademark #text {
-  left: 75px;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  color: #fff;
+  color: #b0b0c5;
   font-weight: 800;
   font-size: 50px;
 }
+#navigation-container #content #trademark #text:hover {
+  color: var(--text-color);
+  font-style: italic;
+}
 #navigation-container #content #trademark #text span {
+  margin-left: 70px;
   text-align: center;
 }
 #navigation-container #content #mobile-container {
   display: none;
+}
+#navigation-container #content #headlines {
+  left: 100px;
+  top: 68px;
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  color: #ececff;
+  font-weight: bold;
+}
+#navigation-container #content #headlines::before {
+  content: "Headlines: ";
+  color: #0ca1ed;
+  font-weight: bold;
+}
+#navigation-container #content #headlines::after {
+  content: "_";
+  animation: text-blinking 0.5s infinite;
+}
+#navigation-container #content #highlighted-pages-container {
+  display: flex;
+  position: absolute;
+  left: 575px;
+  height: 60%;
+  width: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
 }
 
 #content-container {
@@ -99,6 +132,11 @@ body {
 }
 #content-container #mobile-container {
   display: none;
+}
+#content-container #other-links-container {
+  display: none;
+  margin-top: 20px;
+  font-size: 50px;
 }
 #content-container #content {
   padding-left: 40px;
@@ -145,8 +183,10 @@ body {
     width: 32px;
   }
   #navigation-container #content #trademark #text {
-    left: 35px;
     font-size: 20px;
+  }
+  #navigation-container #content #trademark #text #span {
+    margin-left: 40px;
   }
   #navigation-container #content #mobile-container {
     display: block;
@@ -155,6 +195,12 @@ body {
     position: absolute;
     float: right;
     right: 20px;
+  }
+  #navigation-container #content #headlines {
+    display: none;
+  }
+  #navigation-container #content #highlighted-pages {
+    display: none;
   }
 }
 /* width */

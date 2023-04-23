@@ -228,8 +228,8 @@ ul {
 
 p {
   margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 17px;
 }
 
 table {
